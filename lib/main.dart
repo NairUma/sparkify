@@ -38,7 +38,7 @@ class _LoginDemoState extends State<LoginDemo> {
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(top: 60.0),
+              padding: const EdgeInsets.only(top: 60.0, bottom: 60.0),
               child: Center(
                 child: Container(
                     width: 200,
@@ -84,8 +84,8 @@ class _LoginDemoState extends State<LoginDemo> {
                   color: Colors.blue, borderRadius: BorderRadius.circular(20)),
               child: TextButton(
                 onPressed: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => LoginDemo()));
+                  //When Log-in is pressed
+                  //will route based upon result from firebase auth?
                 },
                 child: Text(
                   'Login',
@@ -96,7 +96,15 @@ class _LoginDemoState extends State<LoginDemo> {
             SizedBox(
               height: 130,
             ),
-            Text('New User? Create Account!')
+            TextButton(
+              onPressed: () {
+                //route to sign-up page
+              },
+              child: Text(
+                'New User? Create Account!',
+                style: TextStyle(color: Colors.black, fontSize: 14),
+              ),
+            ),
           ],
         ),
       ),
